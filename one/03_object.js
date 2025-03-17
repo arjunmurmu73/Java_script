@@ -32,6 +32,44 @@ const mySym = Symbol("Key1")
 const symbol_key = {
     name : "Symbol used.",
     [mySym] : "MyKey1"
+    //  mySym : "MyKey1"
 }
-console.log(typeof(symbol_key[mySym]));
+// console.log(typeof(symbol_key[mySym]));
+// console.log(mySym)
 
+const access = {
+    email_id : "murmuarjun99@gmail.com",
+    name : "jaga bhai"
+}
+
+access.email_id = "jagamurmu@gmail.com";
+//console.log(access.email_id)
+
+const frize_obj = {
+    phone_no : '9556926152',
+    gender : "male"   
+}
+
+// frize the object value :
+Object.freeze(frize_obj)
+//console.log(frize_obj);
+frize_obj.phone_no = '8249128690'
+//console.log(frize_obj);
+
+//function : 
+const fun_object = {
+    name : "rajlaxmi Tudu",
+    age : 19,
+    contact_no : '8249127824'
+
+}
+fun_object.greeting = function(){
+    console.log("hello function.")
+}
+fun_object.greetingTwo = function(){
+    console.log(`I am second function, my name is : ${this.name}`);
+}
+
+console.log(fun_object.greeting)
+console.log(fun_object.greeting())
+console.log(fun_object.greetingTwo())
